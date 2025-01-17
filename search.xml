@@ -88,13 +88,14 @@
 
 <ol>
 <li><p>首先 win 键输入环境变量打开</p>
-<p><img src="/assets/image-20250117145940998.png" alt="image-20250117145940998"></p>
+<p><img src="/.io//image-20250117153054301.png" alt="image-20250117153054301"></p>
 </li>
 <li><p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
 </li>
 <li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
 </li>
 </ol>
+<p>图片不能实时预览：<a href="https://blog.csdn.net/mjh1667002013/article/details/129063378">解决方案</a></p>
 ]]></content>
       <categories>
         <category>Software</category>
