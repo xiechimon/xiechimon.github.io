@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2025/01/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>测试文章</title>
     <url>/2025/01/16/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><span id="more"></span>
@@ -13,7 +35,7 @@
 <p>这是一个引用</p>
 </blockquote>
 <h2 id="测试分割线："><a href="#测试分割线：" class="headerlink" title="测试分割线：*** "></a>测试分割线：<br>*** </h2><p>和</p>
-<p>测试图片：<br><img src="/2025/01/16/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/pixelart_pagoda.jpg"></p>
+<p>测试图床图片：<br><img src="https://support.typora.io/media/about-image/custom-folder.png"><br>测试本地图片：</p>
 <p>测试代码块：<br><code>&lt;html&gt;...&lt;/html&gt;</code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
 
@@ -56,28 +78,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/01/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Typora + PowerShell 在终端打开文件</title>
     <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
     <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
@@ -88,14 +88,17 @@
 
 <ol>
 <li><p>首先 win 键输入环境变量打开</p>
-<p><img src="/.io//image-20250117153054301.png" alt="image-20250117153054301"></p>
-</li>
-<li><p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
+<p><img src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117161756246.png" alt="image-20250117161756246"></p>
+<p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
 </li>
 <li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
 </li>
 </ol>
-<p>图片不能实时预览：<a href="https://blog.csdn.net/mjh1667002013/article/details/129063378">解决方案</a></p>
+<p>图片引用的话，我是这样设置的，这样在 Typora 粘贴图片的话就会将图片引入到目录 <code>\source\images</code> 下，并且在其目录下面自动创建一个与文章同名的文件夹，即方便管理，又方便引用，我个人认为是一个很好的解决方案了。</p>
+<p><img src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162102192.png" alt="image-20250117162102192"></p>
+<p>然后我的图片目录是这样的：</p>
+<p>文件夹里面存着我的图片</p>
+<p><img src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162304364.png" alt="image-20250117162304364"></p>
 ]]></content>
       <categories>
         <category>Software</category>
