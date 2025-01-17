@@ -77,4 +77,31 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Typora + PowerShell 在终端打开文件</title>
+    <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
+<blockquote>
+<p>发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 <code>Ctrl + /</code> 打开源代码模式又可以输入了</p>
+</blockquote>
+<span id="more"></span>
+
+<ol>
+<li><p>首先 win 键输入环境变量打开</p>
+<p><img src="/assets/image-20250117145940998.png" alt="image-20250117145940998"></p>
+</li>
+<li><p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
+</li>
+<li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
 </search>

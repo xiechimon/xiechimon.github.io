@@ -22,28 +22,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiechimon.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="“Talk is cheap. Show me the code.” ― Linus Torvalds">
+    <meta name="description" content="最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令hexo n，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。  发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 Ctrl + &#x2F; 打开源代码模式又可以输入了">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Tags">
-<meta property="og:url" content="http://xiechimon.github.io/tags/index.html">
+<meta property="og:title" content="Typora + PowerShell 在终端打开文件">
+<meta property="og:url" content="http://xiechimon.github.io/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Xiechimon&#39;s Blog">
-<meta property="og:description" content="“Talk is cheap. Show me the code.” ― Linus Torvalds">
+<meta property="og:description" content="最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令hexo n，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。  发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 Ctrl + &#x2F; 打开源代码模式又可以输入了">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-15T19:49:48.000Z">
-<meta property="article:modified_time" content="2025-01-15T19:53:37.502Z">
+<meta property="og:image" content="http://xiechimon.github.io/assets/image-20250117145940998.png">
+<meta property="article:published_time" content="2025-01-17T06:39:10.000Z">
+<meta property="article:modified_time" content="2025-01-17T07:09:20.558Z">
 <meta property="article:author" content="Xiechimon">
-<meta property="article:tag" content="Xiechimon, Blog, 博客, 个人网站, 前端, 后端, 全栈, 学习方法, 算法, git">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xiechimon.github.io/assets/image-20250117145940998.png">
 
 
-<link rel="canonical" href="http://xiechimon.github.io/tags/">
+<link rel="canonical" href="http://xiechimon.github.io/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"http://xiechimon.github.io/tags/index.html","path":"tags/index.html","title":"Tags"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://xiechimon.github.io/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/","path":"2025/01/17/Typora + PowerShell 在终端打开文件/","title":"Typora + PowerShell 在终端打开文件"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Tags | Xiechimon's Blog
-</title>
+<title>Typora + PowerShell 在终端打开文件 | Xiechimon's Blog</title>
   
 
 
@@ -202,42 +204,146 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">Tags
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xiechimon.github.io/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Xiechimon">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiechimon's Blog">
+      <meta itemprop="description" content="“Talk is cheap. Show me the code.” ― Linus Torvalds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Typora + PowerShell 在终端打开文件 | Xiechimon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Typora + PowerShell 在终端打开文件
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-01-17 14:39:10 / 修改时间：15:09:20" itemprop="dateCreated datePublished" datetime="2025-01-17T14:39:10+08:00">2025-01-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>168</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    目前共计 4 个标签
-  </div>
-  <div class="tag-cloud-tags">
-    <a href="/tags/Another-Tag/" style="font-size: 12px;" class="tag-cloud-0">Another Tag</a> <a href="/tags/Hexo/" style="font-size: 12px;" class="tag-cloud-0">Hexo</a> <a href="/tags/Testing/" style="font-size: 12px;" class="tag-cloud-0">Testing</a> <a href="/tags/Typora/" style="font-size: 12px;" class="tag-cloud-0">Typora</a>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
+<blockquote>
+<p>发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 <code>Ctrl + /</code> 打开源代码模式又可以输入了</p>
+</blockquote>
+<span id="more"></span>
 
-      </div>
-      
-      
-      
+<ol>
+<li><p>首先 win 键输入环境变量打开</p>
+<p><img src="/assets/image-20250117145940998.png" alt="image-20250117145940998"></p>
+</li>
+<li><p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
+</li>
+<li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
+</li>
+</ol>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Xiechimon
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://xiechimon.github.io/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/" title="Typora + PowerShell 在终端打开文件">http://xiechimon.github.io/2025/01/17/Typora + PowerShell 在终端打开文件/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Typora/" rel="tag"><i class="fa fa-tag"></i> Typora</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/16/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" rel="prev" title="测试文章">
+                  <i class="fa fa-angle-left"></i> 测试文章
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
