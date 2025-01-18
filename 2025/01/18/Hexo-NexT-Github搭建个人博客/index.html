@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/silver/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiechimon.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="零成本搭建博客，国内访问也没问题，下面就介绍一下我的搭建过程以及一些踩过的坑。参考样式：点击访问">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo + NexT + Github搭建个人博客">
+<meta property="og:url" content="http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Xiechimon&#39;s Blog">
+<meta property="og:description" content="零成本搭建博客，国内访问也没问题，下面就介绍一下我的搭建过程以及一些踩过的坑。参考样式：点击访问">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xiechimon.github.io/images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250118220406792.png">
+<meta property="og:image" content="http://xiechimon.github.io/images/Hexo/image-20250118143956110.png">
+<meta property="og:image" content="http://xiechimon.github.io/images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250117165341598.png">
+<meta property="og:image" content="http://xiechimon.github.io/images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250118230752896.png">
+<meta property="article:published_time" content="2025-01-18T13:43:50.000Z">
+<meta property="article:modified_time" content="2025-01-18T15:11:02.157Z">
+<meta property="article:author" content="Xiechimon">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Typora">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xiechimon.github.io/images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250118220406792.png">
+
+
+<link rel="canonical" href="http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/","path":"2025/01/18/Hexo-NexT-Github搭建个人博客/","title":"Hexo + NexT + Github搭建个人博客"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo + NexT + Github搭建个人博客 | Xiechimon's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Xiechimon's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">随便写点</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81-%E5%AE%89%E8%A3%85"><span class="nav-text">一、 安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%E9%A1%B9"><span class="nav-text">二、配置相关项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT-config"><span class="nav-text">NexT config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98"><span class="nav-text">更新主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F"><span class="nav-text">主题样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88"><span class="nav-text">本地实时预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE"><span class="nav-text">三、主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="nav-text">1.侧边栏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E9%A1%B5%E8%84%9A"><span class="nav-text">2.页脚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%B8%96%E5%AD%90"><span class="nav-text">3.帖子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="nav-text">发布字数统计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">4.自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2"><span class="nav-text">自定义页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-%E7%9A%84%E9%BB%98%E8%AE%A4%E9%A1%B5%E9%9D%A2"><span class="nav-text">Hexo 的默认页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89-404-%E9%A1%B5"><span class="nav-text">自定义 404 页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F"><span class="nav-text">自定义样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%9D%82%E9%A1%B9"><span class="nav-text">5.杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1"><span class="nav-text">搜索服务</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8F%92%E4%BB%B6"><span class="nav-text">四、第三方插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT-%E8%87%AA%E5%B8%A6%E6%8F%92%E4%BB%B6"><span class="nav-text">NexT 自带插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-text">评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%85%E8%AF%BB%E5%92%8C%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="nav-text">阅读和访问人数统计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages"><span class="nav-text">五、部署到GitHub Pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-text">六、小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8-PowerShell-%E4%B8%8A%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4%E6%9D%A5%E7%AE%80%E5%8C%96%E7%9B%AE%E5%BD%95%E5%AF%BC%E8%88%AA"><span class="nav-text">在 PowerShell 上通过自定义命令来简化目录导航</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3"><span class="nav-text">参考文档</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Xiechimon"
+      src="/avatar.png">
+  <p class="site-author-name" itemprop="name">Xiechimon</p>
+  <div class="site-description" itemprop="description">“Talk is cheap. Show me the code.” ― Linus Torvalds</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiechimon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xiechimon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:xiechimon@qq.com" title="E-Mail → mailto:xiechimon@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="name" content="Xiechimon">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiechimon's Blog">
+      <meta itemprop="description" content="“Talk is cheap. Show me the code.” ― Linus Torvalds">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo + NexT + Github搭建个人博客 | Xiechimon's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo + NexT + Github搭建个人博客
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-01-18 21:43:50 / 修改时间：23:11:02" itemprop="dateCreated datePublished" datetime="2025-01-18T21:43:50+08:00">2025-01-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">博客</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>零成本搭建博客，国内访问也没问题，下面就介绍一下我的搭建过程以及一些踩过的坑。参考样式：<a href="xiechimon.github.io">点击访问</a></p>
+<span id="more"></span>
+
+<h1 id="一、-安装"><a href="#一、-安装" class="headerlink" title="一、 安装"></a>一、 安装</h1><ol>
+<li><p>安装 Hexo<img data-src="/../images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250118220406792.png" alt="image-20250118220406792"></p>
+</li>
+<li><p>安装 NexT 主题</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 Hexo config 中把主题改为 NexT</p>
+<p> <code>theme: next</code></p>
+</li>
+</ol>
+<h1 id="二、配置相关项"><a href="#二、配置相关项" class="headerlink" title="二、配置相关项"></a>二、配置相关项</h1><h2 id="NexT-config"><a href="#NexT-config" class="headerlink" title="NexT config"></a>NexT config</h2><p>因为我是用 npm 安装的主题，所以需要将他的配置文件单独拉取出来，这也是官方推荐的，可以根据下面这篇文章去配置</p>
+<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/configuration.html">#config-next-yml</a></p>
+<p>现在我们得到了 NexT 主题的配置文件 <code>_config.next.yml</code> 了</p>
+<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-next@latest</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题样式"><a href="#主题样式" class="headerlink" title="主题样式"></a><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/theme-settings/">主题样式</a></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br><span class="line">drakmode <span class="comment"># 深色模式</span></span><br></pre></td></tr></table></figure>
+
+<p>现在可以看我们的站点了 <code>hexo clean &amp;&amp; hexo s</code></p>
+<h2 id="本地实时预览"><a href="#本地实时预览" class="headerlink" title="本地实时预览"></a><a target="_blank" rel="noopener" href="https://blog.moeyua.com/posts/hexo-%E6%97%A0%E6%B3%95%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88/">本地实时预览</a></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g -w</span><br><span class="line">hexo generate --watch</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;title&gt;  <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page &lt;<span class="string">&quot;page name&quot;</span>&gt;   <span class="comment"># 建立新页面</span></span><br><span class="line">hexo clean <span class="comment"># 清除缓存文件</span></span><br><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;  <span class="comment"># 列出所有路由</span></span><br><span class="line">hexo s  <span class="comment"># 启动</span></span><br><span class="line">hexo clean &amp;&amp; hexo d  <span class="comment"># 部署</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="三、主题设置"><a href="#三、主题设置" class="headerlink" title="三、主题设置"></a>三、主题设置</h1><blockquote>
+<p>下面我仅用相关参数表示对应功能，大家在 NexT 配置文件中 <code>Ctrl + F</code> 即可找到它们。</p>
+</blockquote>
+<h2 id="1-侧边栏"><a href="#1-侧边栏" class="headerlink" title="1.侧边栏"></a>1.侧边栏</h2><p>toc - 侧边栏目录</p>
+<p>favicon - 站点 icon，放 <code>\source</code> 目录下即可，因为我想要把 <code>\source\images</code> 用于存放帖子的图片</p>
+<p>custom_logo - 头像， <code>\source</code>  </p>
+<p>creative_commons - CC 许可证，中文为 <code>zh-hans</code></p>
+<p>menu - 配置菜单项，就是主页、归档那些什么的显示</p>
+<p>avatar - 更换侧边栏头像</p>
+<p>social - 侧边栏社交链接</p>
+<p>links - 友链</p>
+<h2 id="2-页脚"><a href="#2-页脚" class="headerlink" title="2.页脚"></a>2.页脚</h2><p>powered - 由 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; <a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT.Gemini</a> 强力驱动</p>
+<p>reward - 打赏</p>
+<p>follow_me - 文章底部社交链接</p>
+<h2 id="3-帖子"><a href="#3-帖子" class="headerlink" title="3.帖子"></a>3.帖子</h2><p>tag_icon - 将正文底部的标签左边的<code>#</code>替换为icon</p>
+<p> <code>&lt;!-- more --&gt;</code>  - 手动断开文章，使得首页不显示文章全文</p>
+<h3 id="发布字数统计"><a href="#发布字数统计" class="headerlink" title="发布字数统计"></a>发布字数统计</h3><ol>
+<li><p>安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-word-counter</span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Hexo config: <code>symbols_count_time</code></p>
+</li>
+<li><p>NexT config: </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: <span class="literal">true</span>  <span class="comment"># 帖子字数</span></span><br><span class="line">  <span class="keyword">time</span>: <span class="literal">true</span>  <span class="comment"># 阅读时间</span></span><br><span class="line">  total_symbols: <span class="literal">true</span>  <span class="comment"># 站点总字数</span></span><br><span class="line">  total_time: <span class="literal">true</span>  <span class="comment"># 站点总阅读时长</span></span><br><span class="line">  awl: 4  <span class="comment"># 平均字长（以单词为单位的字符数）</span></span><br><span class="line">  wpm: 275  <span class="comment"># 每分钟的平均字数</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="4-自定义"><a href="#4-自定义" class="headerlink" title="4.自定义"></a>4.自定义</h2><h3 id="自定义页面"><a href="#自定义页面" class="headerlink" title="自定义页面"></a>自定义页面</h3><ol>
+<li><p>先创建一个页面</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> [your-site]  <span class="comment"># 进到站点中</span></span><br><span class="line">hexo new page [page-name]  <span class="comment"># 创建页面</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在文件开头的 YAML 块（用于写入配置）中添加配置</p>
+</li>
+<li><p>通过主题的配置文件将你所创建的页面路由写入菜单menu，图标在 <a target="_blank" rel="noopener" href="https://fontawesome.com/">font awesome</a> 中找</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 标签</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2014-12-22 12:39:04</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Hexo-的默认页面"><a href="#Hexo-的默认页面" class="headerlink" title="Hexo 的默认页面"></a>Hexo 的默认页面</h3><ul>
+<li>《标签》页：记得加<code>type: tags</code>，它的配置项在 <code>tagcloud</code></li>
+<li>《分类》页：加上 <code>type: categories</code> 即可</li>
+</ul>
+<h3 id="自定义-404-页"><a href="#自定义-404-页" class="headerlink" title="自定义 404 页"></a>自定义 404 页</h3><ol>
+<li><p>确保禁用 <code>relative_link</code></p>
+</li>
+<li><p>新建 404 页</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo-site</span><br><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>用户是否可以重定向到 404 页面取决于网站托管服务或 Web 服务器的设置，而不是 Hexo。例如，如果使用 Nginx 作为服务器，则还需要在 <code>nginx.conf</code> 文件中配置 404 页面。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="自定义样式"><a href="#自定义样式" class="headerlink" title="自定义样式"></a>自定义样式</h3><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/advanced-settings/custom-files.html">自定义文件</a><br>与数据文件一样，您可以将所有自定义布局或样式放置存放在 <code>source/_data</code> 中，并在NexT config 中把 <code>custom_file_path</code> 中的注释打开相应的注释打开。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/theme-next/theme-next-canvas-nest">动态背景</a>的配置，由于感觉有点占内存后面我给取消掉了</p>
+<h2 id="5-杂项"><a href="#5-杂项" class="headerlink" title="5.杂项"></a>5.杂项</h2><p>reading_progress - 顶部阅读进度加载条</p>
+<p>back2top - 返回顶部按钮</p>
+<p>bookmark - 书签（保存用户阅读进度）</p>
+<p>github_banner - 右上角的 GitHub 标签</p>
+<p>font - 更换字体</p>
+<p>pace - 页面加载期间顶部的进度条</p>
+<p>codeblock - 代码块相关设置</p>
+<h3 id="搜索服务"><a href="#搜索服务" class="headerlink" title="搜索服务"></a>搜索服务</h3><ol>
+<li><p><code>npm install hexo-generator-searchdb</code>安装</p>
+</li>
+<li><p>Hexo config:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: <span class="literal">true</span></span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Next cofig:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="四、第三方插件"><a href="#四、第三方插件" class="headerlink" title="四、第三方插件"></a>四、第三方插件</h1><p><a target="_blank" rel="noopener" href="https://github.com/theme-next/awesome-next">官方插件库</a></p>
+<h2 id="NexT-自带插件"><a href="#NexT-自带插件" class="headerlink" title="NexT 自带插件"></a>NexT 自带插件</h2><p>pajx - 加速访问网页</p>
+<p>fancybox - 查看图片（更多自定义）</p>
+<p>mediumzoom - 查看图片（仅查看，这两个不能同时开）</p>
+<p>lazyload - 延迟图片加载</p>
+<p>pangu - 在中文和英文数字间加个空格</p>
+<p>quicklink - 加快访问速度</p>
+<p>pace - 进度条</p>
+<h2 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h2><p>我选择 <del>Waline</del> ，<del>非常好用</del> ，不用登录也可以评论，注意一个就是那边的 <code>serverURL</code> 记得填成 <code>Domains</code> 旁的网址，也有 NexT 主题的<a target="_blank" rel="noopener" href="https://github.com/walinejs/waline/tree/main/packages/hexo-next">插件</a>，可以点击进去配置。</p>
+<p><a target="_blank" rel="noopener" href="https://waline.js.org/guide/get-started/">Waline官方文档</a></p>
+<p>Waline用 Vercel 部署非常方便，但是奈何被墙国内无法访问😭（白嫖党泪目）最终还是改用了utterances，屈服了，Waline等以后有自己服务器再配置吧（可能）</p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/apps/utterances">安装</a><img data-src="/../images/Hexo/image-20250118143956110.png" alt="image-20250118143956110"></p>
+</li>
+<li><p>在 NexT config 中找到并启用 <code>utterances</code></p>
+</li>
+</ol>
+<h3 id="阅读和访问人数统计"><a href="#阅读和访问人数统计" class="headerlink" title="阅读和访问人数统计"></a>阅读和访问人数统计</h3><p>参考这篇<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/third-party-services/statistics-and-analytics.html?highlight=busuanzi#Busuanzi-Counting-China">博客</a></p>
+<h1 id="五、部署到GitHub-Pages"><a href="#五、部署到GitHub-Pages" class="headerlink" title="五、部署到GitHub Pages"></a>五、部署到GitHub Pages</h1><p>可以看 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo 官方文档</a>配合食用</p>
+<ol>
+<li><p>建立名为 <strong>&lt;username&gt;.github.io</strong>的储存库</p>
+</li>
+<li><p>在项目目录底下安装插件用于一键部署</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 Hexo config 下添加以下配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行 <code>hexo clean &amp;&amp; hexo d</code>，即可配置成功</p>
+</li>
+</ol>
+<h1 id="六、小技巧"><a href="#六、小技巧" class="headerlink" title="六、小技巧"></a>六、小技巧</h1><h4 id="在-PowerShell-上通过自定义命令来简化目录导航"><a href="#在-PowerShell-上通过自定义命令来简化目录导航" class="headerlink" title="在 PowerShell 上通过自定义命令来简化目录导航"></a>在 PowerShell 上通过自定义命令来简化目录导航</h4><p>效果：<img data-src="/../images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250117165341598.png" alt="image-20250117165341598"></p>
+<ol>
+<li><p><code>notepad.exe $PROFILE</code> 打开 pwsh 的配置文件</p>
+</li>
+<li><p>添加以下内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> order &#123;</span><br><span class="line">    <span class="title class_">Set</span>-<span class="title class_">Location</span> -<span class="title class_">Path</span> <span class="string">&quot;your path&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面的 order 可以改成自己想要的指令，路径根据自己的工作区来设置</p>
+</li>
+<li><p>完成后保存并关闭文件，使用 <code>. $PROFILE</code> 应用一下配置</p>
+</li>
+</ol>
+<p>最后来说一下正常写文章的流程：</p>
+<ol>
+<li><code>cmd + r</code> 打开 PowerShell（我习惯是这样）</li>
+<li>cd 到项目目录</li>
+<li><code>hexo new &quot;文章名称&quot;</code> </li>
+<li><code>typora .\source\_posts\title.md</code> 打开我们的文章</li>
+<li><code>hexo clean &amp;&amp; hexo d</code> （也可以先 <code>hexo g &amp;&amp; hexo s</code> 本地预览下）</li>
+</ol>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT 主题官方文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo 官方文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://roife.github.io/posts/use-utterances-for-blog-comment/">utterances配置参考博客</a></p>
+<hr>
+<p>有很多我想完成而未完成的功能，暂时先这样吧~</p>
+<p>TBD</p>
+<p><img data-src="/../images/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20250118230752896.png" alt="image-20250118230752896"></p>
+<p>配置 404 页面</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Xiechimon
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Hexo + NexT + Github搭建个人博客">http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github搭建个人博客/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+              <a href="/tags/Github/" rel="tag"><i class="fa fa-tag"></i> Github</a>
+              <a href="/tags/Typora/" rel="tag"><i class="fa fa-tag"></i> Typora</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/17/%E6%B5%8B%E8%AF%95/" rel="prev" title="测试">
+                  <i class="fa fa-angle-left"></i> 测试
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Xiechimon</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">2k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://xiechimon.github.io/2025/01/18/Hexo-NexT-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"xiechimon/xiechimon.github.io","issue_term":"pathname","theme":"gruvbox-dark"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>
