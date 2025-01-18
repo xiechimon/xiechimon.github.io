@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Typora + PowerShell 在终端打开文件</title>
+    <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
+<blockquote>
+<p>发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 <code>Ctrl + /</code> 打开源代码模式又可以输入了</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><ol>
+<li><p>首先 win 键输入环境变量打开</p>
+<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117161756246.png" alt="image-20250117161756246"></p>
+<p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
+</li>
+<li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
+</li>
+</ol>
+<h1 id="图片引用相关设置"><a href="#图片引用相关设置" class="headerlink" title="图片引用相关设置"></a>图片引用相关设置</h1><p>图片引用的话，我是这样设置的，这样在 Typora 粘贴图片的话就会将图片引入到目录 <code>\source\images</code> 下，并且在其目录下面自动创建一个与文章同名的文件夹，即方便管理，又方便引用，我个人认为是一个很好的解决方案了。</p>
+<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162102192.png" alt="image-20250117162102192"></p>
+<p>然后我的图片目录是这样的：</p>
+<p>文件夹里面存着我的图片</p>
+<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162304364.png" alt="image-20250117162304364"></p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试</title>
     <url>/2025/01/17/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>测试代码块：</p>
@@ -33,36 +64,5 @@
 <div class="note "><h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>(without define class style)</p>
 </div>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Typora + PowerShell 在终端打开文件</title>
-    <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
-<blockquote>
-<p>发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 <code>Ctrl + /</code> 打开源代码模式又可以输入了</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><ol>
-<li><p>首先 win 键输入环境变量打开</p>
-<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117161756246.png" alt="image-20250117161756246"></p>
-<p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
-</li>
-<li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
-</li>
-</ol>
-<h1 id="图片引用相关设置"><a href="#图片引用相关设置" class="headerlink" title="图片引用相关设置"></a>图片引用相关设置</h1><p>图片引用的话，我是这样设置的，这样在 Typora 粘贴图片的话就会将图片引入到目录 <code>\source\images</code> 下，并且在其目录下面自动创建一个与文章同名的文件夹，即方便管理，又方便引用，我个人认为是一个很好的解决方案了。</p>
-<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162102192.png" alt="image-20250117162102192"></p>
-<p>然后我的图片目录是这样的：</p>
-<p>文件夹里面存着我的图片</p>
-<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162304364.png" alt="image-20250117162304364"></p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Typora</tag>
-        <tag>Hexo</tag>
-      </tags>
   </entry>
 </search>
