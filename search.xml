@@ -166,32 +166,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VSCode 创建模板</title>
-    <url>/2025/01/20/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>输入自定义字符串自动为你的文件创建代码片段</p>
-<span id="more"></span>
-
-<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><ol>
-<li><p>设置 → 片段</p>
-<p><img data-src="/../images/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/image-20250120232157795.png" alt="image-20250120232157795"></p>
-</li>
-<li><p>选择自己需要的对应语言，会生成一个 JSON 文件让你配置</p>
-</li>
-<li><p>进入 <a href="https://snippet-generator.app/">Snippet generator</a> ，会根据你的代码和描述为你生成<img data-src="/../images/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/image-20250120234225639.png" alt="image-20250120234225639"></p>
-</li>
-<li><p>粘贴进去格式化一下即可</p>
-</li>
-</ol>
-<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img data-src="/../images/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/image-20250120234450980.png" alt="image-20250120234450980"></p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Typora + PowerShell 在终端打开文件</title>
     <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
     <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
@@ -223,6 +197,70 @@
       </tags>
   </entry>
   <entry>
+    <title>VSCode 创建模板</title>
+    <url>/2025/01/20/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>输入自定义字符串自动为你的文件创建代码片段</p>
+<span id="more"></span>
+
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><ol>
+<li><p>设置 → 片段</p>
+<p><img data-src="/../images/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/image-20250120232157795.png" alt="image-20250120232157795"></p>
+</li>
+<li><p>选择自己需要的对应语言，会生成一个 JSON 文件让你配置</p>
+</li>
+<li><p>进入 <a href="https://snippet-generator.app/">Snippet generator</a> ，会根据你的代码和描述为你生成<img data-src="/../images/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/image-20250120234225639.png" alt="image-20250120234225639"></p>
+</li>
+<li><p>粘贴进去格式化一下即可</p>
+</li>
+</ol>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><img data-src="/../images/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/image-20250120234450980.png" alt="image-20250120234450980"></p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过pyinstall将pygame打包成exe</title>
+    <url>/2025/01/31/%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86pygame%E6%89%93%E5%8C%85%E6%88%90exe/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-打包"><a href="#2-打包" class="headerlink" title="2. 打包"></a>2. 打包</h3><h4 id="2-1-打包成多个文件，可以弄成安装程序"><a href="#2-1-打包成多个文件，可以弄成安装程序" class="headerlink" title="2.1 打包成多个文件，可以弄成安装程序"></a>2.1 打包成多个文件，可以弄成安装程序</h4><ul>
+<li><code>-w</code> 去除黑窗口控制台</li>
+<li><code>-i favicon.ico</code> 指定logo</li>
+<li><code>--name=tset.exe</code> 命名</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyinstaller -w -i favicon.ico --name=tset.exe main.py</span><br></pre></td></tr></table></figure>
+
+<p>然后去 <code>dist\mian</code> 中找到exe程序，把所有被引用用的相关文件放入它的同级目录中后打开它即可</p>
+<h4 id="2-2-打包成单个-exe-文件"><a href="#2-2-打包成单个-exe-文件" class="headerlink" title="2.2 打包成单个 exe 文件"></a>2.2 打包成单个 exe 文件</h4><ol>
+<li><p>只生成 <code>.spec</code> 文件，不执行打包</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyi-makespec main.py --collect-all attachment -w -F</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 <code>.spec</code> 文件</p>
+<p>找到 <code>datas</code> 列表，把&#x3D;&#x3D;资源目录的实际路径&#x3D;&#x3D;和&#x3D;&#x3D;程序中的调用路径&#x3D;&#x3D;添加到列表中，比如：我把我的附件都放在 <code>attachment</code> 文件夹中了<img data-src="/../images/%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86pygame%E6%89%93%E5%8C%85%E6%88%90exe/image-20250131230553847.png" alt="image-20250131230553847"></p>
+</li>
+<li><p>打包</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pyinstaller main.spec</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打包字体</p>
+<p>如果想要把字体也打包进去，我认为应该先在 Windows 中安装该字体，pyinstaller 应该是从 Windows 的字体文件夹中找字体去进行安装，同时要把 <code>pygame.font.Font</code> 更换成 <code>pygame.font.SysFont</code> 载入系统字体</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Pygame</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>WinSnap - 创建高级屏幕截图的截图软件</title>
     <url>/2025/01/19/WinSnap-%E5%88%9B%E5%BB%BA%E9%AB%98%E7%BA%A7%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%E7%9A%84%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6/</url>
     <content><![CDATA[<p>最近在截图的时候突然馋上了 Mac 上的一款软件：iShot 的一个功能，他能为截图自动添加好看的阴影，并且完美的把圆角给截下来，就想着在 Windows 上找一个拥有这种功能的软件：WinSnap。</p>
@@ -239,6 +277,42 @@
       </categories>
       <tags>
         <tag>WinSnap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于 JavaScript 的学习记录</title>
+    <url>/2025/01/29/%E5%85%B3%E4%BA%8E-JavaScript-%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p><a href="https://youtu.be/EerdGm-ehJQ?si=Xa_d370pa_vccn_M">视频链接</a></p>
+<span id="more"></span>
+
+<h2 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h2><ul>
+<li>将网页中内容全部清空并替换成hello</li>
+</ul>
+<p>​			<code>document.body.innerHTML = &quot;hello&quot;</code></p>
+<ul>
+<li>查看类型</li>
+</ul>
+<p>​			<code>typeof 3 -&gt; &#39;number&#39;</code> </p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
+<li><p>string + number &#x3D; string</p>
+</li>
+<li><p>特殊的字符串  <code>``</code> </p>
+<ol>
+<li><p>在其中间加 <code>$&#123;&#125;</code> 可以直接在里面计算数字</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`<span class="subst">$&#123;<span class="number">1</span> + <span class="number">1</span>&#125;</span>`</span>  <span class="comment">// &#x27;2&#x27;</span></span><br><span class="line"><span class="string">&#x27; &#x27;</span> + <span class="number">1</span> + <span class="number">1</span>  <span class="comment">// &#x27;2&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在里面换行时，会输出换行符</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">`abc</span></span><br><span class="line"><span class="string">def</span></span><br><span class="line"><span class="string">ghi`</span>	# <span class="string">&#x27;abc\ndef\nghi&#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>当需要将数值放入字符串或多行输入字符串时才使用</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
