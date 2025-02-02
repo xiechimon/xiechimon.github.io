@@ -166,37 +166,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Typora + PowerShell 在终端打开文件</title>
-    <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
-<blockquote>
-<p>发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 <code>Ctrl + /</code> 打开源代码模式又可以输入了</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><ol>
-<li><p>首先 win 键输入环境变量打开</p>
-<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117161756246.png" alt="image-20250117161756246"></p>
-<p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
-</li>
-<li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
-</li>
-</ol>
-<h1 id="图片引用相关设置"><a href="#图片引用相关设置" class="headerlink" title="图片引用相关设置"></a>图片引用相关设置</h1><p>图片引用的话，我是这样设置的，这样在 Typora 粘贴图片的话就会将图片引入到目录 <code>\source\images</code> 下，并且在其目录下面自动创建一个与文章同名的文件夹，即方便管理，又方便引用，我个人认为是一个很好的解决方案了。</p>
-<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162102192.png" alt="image-20250117162102192"></p>
-<p>然后我的图片目录是这样的：</p>
-<p>文件夹里面存着我的图片</p>
-<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162304364.png" alt="image-20250117162304364"></p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Typora</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>VSCode 创建模板</title>
     <url>/2025/01/20/Vscode-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<p>输入自定义字符串自动为你的文件创建代码片段</p>
@@ -225,7 +194,8 @@
   <entry>
     <title>通过pyinstall将pygame打包成exe</title>
     <url>/2025/01/31/%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86pygame%E6%89%93%E5%8C%85%E6%88%90exe/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>Python 打包成 exe 文件有很多方法，其中最常用的就是 pyinstaller。</p>
+<span id="more"></span>
 
 <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
 
@@ -259,6 +229,71 @@
         <tag>Python</tag>
         <tag>Pygame</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Typora + PowerShell 在终端打开文件</title>
+    <url>/2025/01/17/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>最近在用 Hexo 搭我人生中的第一个博客，Hexo 新建帖子的时候需要在终端用命令<code>hexo n</code>，然后再用 Typora 打开，用鼠标感觉很麻烦，因此直接用终端一键启动了。</p>
+<blockquote>
+<p>发现 Typora 的一个 bug🐛，在 YAML 后面写第一个字的时候总是输不进去，用 <code>Ctrl + /</code> 打开源代码模式又可以输入了</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h1><ol>
+<li><p>首先 win 键输入环境变量打开</p>
+<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117161756246.png" alt="image-20250117161756246"></p>
+<p>找到自己的 Typora 安装目录，把安装目录添加到环境变量 <code>Path</code> 中即可，我的是 <code>D:\Application\Typora</code></p>
+</li>
+<li><p>可以用 <code>typora + 文件名/文件夹/目录</code> 一键启动了</p>
+</li>
+</ol>
+<h1 id="图片引用相关设置"><a href="#图片引用相关设置" class="headerlink" title="图片引用相关设置"></a>图片引用相关设置</h1><p>图片引用的话，我是这样设置的，这样在 Typora 粘贴图片的话就会将图片引入到目录 <code>\source\images</code> 下，并且在其目录下面自动创建一个与文章同名的文件夹，即方便管理，又方便引用，我个人认为是一个很好的解决方案了。</p>
+<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162102192.png" alt="image-20250117162102192"></p>
+<p>然后我的图片目录是这样的：</p>
+<p>文件夹里面存着我的图片</p>
+<p><img data-src="/../images/Typora%20+%20PowerShell%20%E5%9C%A8%E7%BB%88%E7%AB%AF%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/image-20250117162304364.png" alt="image-20250117162304364"></p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Typora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2025/01/17/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>测试代码块：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, world!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Lorem &#123;% label @ipsum %&#125; &#123;% label primary@dolor sit %&#125; amet, consectetur &#123;% label success@adipiscing elit, %&#125; sed &#123;% label info@do eiusmod %&#125; tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim *&#123;% label warning @ad %&#125;* minim veniam, quis **&#123;% label danger@nostrud %&#125;** exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br></pre></td></tr></table></figure>
+<p>Lorem <mark class="label ">ipsum</mark> <mark class="label primary">dolor sit</mark> amet, consectetur <mark class="label success">adipiscing elit,</mark> sed <mark class="label info">do eiusmod</mark> tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim <em><mark class="label warning">ad</mark></em> minim veniam, quis <strong><mark class="label danger">nostrud</mark></strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<h1 id="链接网格"><a href="#链接网格" class="headerlink" title="链接网格"></a>链接网格</h1><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div></div>
+
+<h1 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">#### Header</span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note "><h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>(without define class style)</p>
+</div>
+]]></content>
   </entry>
   <entry>
     <title>WinSnap - 创建高级屏幕截图的截图软件</title>
@@ -314,39 +349,5 @@
       <tags>
         <tag>JavaScript</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2025/01/17/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>测试代码块：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, world!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Lorem &#123;% label @ipsum %&#125; &#123;% label primary@dolor sit %&#125; amet, consectetur &#123;% label success@adipiscing elit, %&#125; sed &#123;% label info@do eiusmod %&#125; tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim *&#123;% label warning @ad %&#125;* minim veniam, quis **&#123;% label danger@nostrud %&#125;** exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br></pre></td></tr></table></figure>
-<p>Lorem <mark class="label ">ipsum</mark> <mark class="label primary">dolor sit</mark> amet, consectetur <mark class="label success">adipiscing elit,</mark> sed <mark class="label info">do eiusmod</mark> tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>Ut enim <em><mark class="label warning">ad</mark></em> minim veniam, quis <strong><mark class="label danger">nostrud</mark></strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-<h1 id="链接网格"><a href="#链接网格" class="headerlink" title="链接网格"></a>链接网格</h1><div class="link-grid"><div class="link-grid-container">
-<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
-<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
-<a href="https://theme-next.js.org/"></a>
-</div><div class="link-grid-container">
-<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
-<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
-<a href="https://theme-next.js.org/"></a>
-</div><div class="link-grid-container">
-<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
-<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
-<a href="https://theme-next.js.org/"></a>
-</div><div class="link-grid-container">
-<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
-<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
-<a href="https://theme-next.js.org/"></a>
-</div></div>
-
-<h1 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">#### Header</span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note "><h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>(without define class style)</p>
-</div>
-]]></content>
   </entry>
 </search>

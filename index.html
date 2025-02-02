@@ -234,9 +234,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-01-31 20:39:57 / 修改时间：23:21:02" itemprop="dateCreated datePublished" datetime="2025-01-31T20:39:57+08:00">2025-01-31</time>
+      <time title="创建时间：2025-01-31 20:39:57" itemprop="dateCreated datePublished" datetime="2025-01-31T20:39:57+08:00">2025-01-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-02 23:22:09" itemprop="dateModified" datetime="2025-02-02T23:22:09+08:00">2025-02-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -255,7 +261,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>249</span>
+      <span>270</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -273,33 +279,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
-<h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-打包"><a href="#2-打包" class="headerlink" title="2. 打包"></a>2. 打包</h3><h4 id="2-1-打包成多个文件，可以弄成安装程序"><a href="#2-1-打包成多个文件，可以弄成安装程序" class="headerlink" title="2.1 打包成多个文件，可以弄成安装程序"></a>2.1 打包成多个文件，可以弄成安装程序</h4><ul>
-<li><code>-w</code> 去除黑窗口控制台</li>
-<li><code>-i favicon.ico</code> 指定logo</li>
-<li><code>--name=tset.exe</code> 命名</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller -w -i favicon.ico --name=tset.exe main.py</span><br></pre></td></tr></table></figure>
-
-<p>然后去 <code>dist\mian</code> 中找到exe程序，把所有被引用用的相关文件放入它的同级目录中后打开它即可</p>
-<h4 id="2-2-打包成单个-exe-文件"><a href="#2-2-打包成单个-exe-文件" class="headerlink" title="2.2 打包成单个 exe 文件"></a>2.2 打包成单个 exe 文件</h4><ol>
-<li><p>只生成 <code>.spec</code> 文件，不执行打包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyi-makespec main.py --collect-all attachment -w -F</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑 <code>.spec</code> 文件</p>
-<p>找到 <code>datas</code> 列表，把&#x3D;&#x3D;资源目录的实际路径&#x3D;&#x3D;和&#x3D;&#x3D;程序中的调用路径&#x3D;&#x3D;添加到列表中，比如：我把我的附件都放在 <code>attachment</code> 文件夹中了<img data-src="/../images/%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86pygame%E6%89%93%E5%8C%85%E6%88%90exe/image-20250131230553847.png" alt="image-20250131230553847"></p>
-</li>
-<li><p>打包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller main.spec</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打包字体</p>
-<p>如果想要把字体也打包进去，我认为应该先在 Windows 中安装该字体，pyinstaller 应该是从 Windows 的字体文件夹中找字体去进行安装，同时要把 <code>pygame.font.Font</code> 更换成 <code>pygame.font.SysFont</code> 载入系统字体</p>
-</li>
-</ol>
-
+          <p>Python 打包成 exe 文件有很多方法，其中最常用的就是 pyinstaller。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/31/%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86pygame%E6%89%93%E5%8C%85%E6%88%90exe/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -617,5 +605,14 @@
 <script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"xiechimon/xiechimon.github.io","issue_term":"pathname","theme":"gruvbox-dark"}</script>
 <script src="/js/third-party/comments/utterances.js"></script>
 
-</body>
+<!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"left",mobileDisplay:true,models:[{"path":"https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json","mobilePosition":[-10,23],"mobileScale":0.1,"mobileStageStyle":{"width":180,"height":166},"motionPreloadStrategy":"IDLE","position":[-10,35],"scale":0.15,"stageStyle":{"width":250,"height":250}},{"path":"https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json","scale":0.12,"position":[0,0],"stageStyle":{"width":250},"mobileScale":0.08,"mobilePosition":[0,0],"mobileStageStyle":{"width":180}},{"path":"https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json","scale":0.12,"position":[0,0],"mobileScale":0.08,"mobilePosition":[0,0],"mobileStageStyle":{"width":180},"stageStyle":{"width":250}}],parentElement:document.body,primaryColor:"var(--btn-bg)",sayHello:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":180,"height":80,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15000,message:function(){
+  return axios.get('https://v1.hitokoto.cn?c=i')
+    .then(function (response) {
+      return response.data.hitokoto ;
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+}
+}}});</script><!-- hexo injector body_end end --></body>
 </html>
